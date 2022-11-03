@@ -1,7 +1,11 @@
-class PirateShip extends SailBoat {
-  var numGangPlanks: Int = 0
-}
+  class PirateShip (val numGangPlanks: Int) extends SailBoat (2, false, false) {
 
-val theBlackPearl = new PirateShip {
-  numGangPlanks = 4
-}
+    def canonFire(missileOfChoice: String): Unit = {
+      println(s"$missileOfChoice has successfully been fired!")
+    }
+
+    def canOutGun(pirateShip: PirateShip): Boolean = {
+      numGangPlanks > pirateShip.numGangPlanks
+    }
+
+  }

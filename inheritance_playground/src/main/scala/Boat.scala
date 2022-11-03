@@ -1,18 +1,24 @@
-class Boat {
-    val length: Int = 0
-    val width: Int = 0
-    val topSpeed: Int = 0
+class Boat (val length: Int, val width: Int, val topSpeed: Int){
+
+    def canFloat(boat: Boat): Unit = {
+        println(s"Bobbing along at ${boat.topSpeed}mph")
+    }
+
+    def isFasterThan (boat: Boat): Boolean = {
+        topSpeed > boat.topSpeed
+    }
+
 }
 
 trait Artillery {
-    val numGuns: Int
-    val range: Int
+    val numGuns: Int = 2
+    val range: Int = 100
 }
 
 trait RenownedDesigner {
-    val name: String
-    val location: String
+    val name: String = "name"
+    val location: String = "location"
 }
 
-val
+
 

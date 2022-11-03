@@ -1,7 +1,12 @@
+class LuxurySailBoat (val hasJacuzzi: Boolean, val hasBooze: Boolean) extends SailBoat (2, false, true) with RenownedDesigner {
 
-class LuxurySailBoat extends SailBoat with RenownedDesigner {
-  val hasJacuzzi: Boolean = true
-  val hasBooze: Boolean = true
-  override val name: String = "Fitz"
-  override val location: String = "Germany"
+  def isFun(): String = {
+    if(hasBooze){
+      "Yeah!!"
+    } else {
+      "Probably not..."
+    }
+  }
+
 }
+

@@ -1,4 +1,3 @@
-class MotorBoat extends Boat {
-    val engineSize: Int = 0
-    val fuelType: String = ""
+class MotorBoat (val engineSize: Int, val fuelType: String) extends Boat (500, 200, 35){
+
 }

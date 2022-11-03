@@ -1,5 +1,5 @@
-class SailBoat extends Boat {
-  var numSails: Int = 0
-  val hasOars: Boolean = false
-  val canTrack: Boolean = true
+class SailBoat (val numSails: Int, val hasOars: Boolean, val canTrack: Boolean) extends Boat (700,400,8){
+
+
+
 }
