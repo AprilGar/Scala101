@@ -36,6 +36,6 @@ object playground extends App {
   println("Is faster? ", boat1.isFasterThan(sailBoat1))
 
   println("Fun? ", luxurySailBoat1.isFun())
-  println("Fun? ", AA.isFun())
+  println(s"Fun? ${AA.isFun()}" )
 
 }

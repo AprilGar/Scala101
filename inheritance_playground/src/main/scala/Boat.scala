@@ -11,8 +11,8 @@ class Boat (val length: Int, val width: Int, val topSpeed: Int){
 }
 
 trait Artillery {
-    val numGuns: Int = 2
-    val range: Int = 100
+    val numGuns: Int = 0
+    val range: Int = 0
 }
 
 trait RenownedDesigner {
