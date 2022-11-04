@@ -20,6 +20,10 @@ class FizzBuzzTestSpec extends FlatSpec {
     assert(FizzBuzz.fizzBuzz(13) == "13")
   }
 
+  "FizzBuzz" should "return 0 if 0 is original number" in {
+    assert(FizzBuzz.fizzBuzz(0) == "0")
+  }
+
 }
 
 
