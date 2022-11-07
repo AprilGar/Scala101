@@ -1,13 +1,6 @@
-class Person(
-              val firstName: String,
-              val gender: String,
-              val hairColour: String,
-              val eyeColour: String,
-              val wearsGlasses: Boolean,
-              val wearsHat: Boolean
-            )
-{
-
-
-
-}
+case class Person (firstName: String,
+                      gender: String,
+                      hairColour: String,
+                      eyeColour: String,
+                      wearsGlasses: Boolean,
+                      wearsHat: Boolean)
