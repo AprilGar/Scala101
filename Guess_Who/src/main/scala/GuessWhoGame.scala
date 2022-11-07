@@ -14,4 +14,18 @@ class GuessWhoGame {
 
   val randomPerson = personCards(random.nextInt(personCards.length))
 
+  def wearsAHat(): Unit = {
+    personCards.filter {
+      person => person.wearsHat == true
+    }
+  }
+
+  def wearsGlasses(): Unit = {
+    personCards.filter {
+      person => person.wearsGlasses == true
+    }
+  }
+
+
+
 }
