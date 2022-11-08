@@ -13,17 +13,32 @@ class GuessWhoGame {
 
   val randomPerson = personCards(random.nextInt(personCards.length))
 
-  def wearsAHat(): Seq[Person] = {
-    personCards.filter {
-      person => person.wearsHat == true
+  def wearsAHat(ComputerGuess: Person): String = {
+    if (ComputerGuess.wearsHat == true){
+      personCards.filter {
+        person => person.wearsHat == true
+      }
+      "Yes, they do wear a hat!"
+    } else {
+      personCards.filter {
+        person => person.wearsHat != true
+      }
+      "Nope, they don't wear a hat!"
     }
   }
 
-  def wearsGlasses(): Seq[Person] = {
-    personCards.filter {
-      person => person.wearsGlasses == true
+  def wearsGlasses(computerGuess: Person): String = {
+    if (computerGuess.wearsGlasses == true){
+      personCards.filter {
+        person => person.wearsGlasses == true}
+          "Yes, they do wear glasses!"
+      } else {
+      personCards.filter {
+        person => person.wearsGlasses == true
+      }
+      "No, they don't wear glasses!"
+      }
     }
-  }
 
   def firstNameCorrect(firstName: String, computerGuess: Person): String = {
     if (firstName == computerGuess.firstName) {
@@ -36,6 +51,46 @@ class GuessWhoGame {
     }
   }
 
+  def genderCorrect(gender:String, computerGuess: Person): String = {
+    if (computerGuess.gender  == gender) {
+      personCards.filter {
+        person => person.gender == gender
+      }
+      s"You're right! They are $gender"
+    } else {
+      personCards.filter {
+        person => person.gender != gender
+      }
+      s"Nope, they're not $gender"
+    }
+  }
 
+  def hairColourCorrect(hairColour: String, computerGuess: Person): String = {
+    if (computerGuess.hairColour == hairColour) {
+      personCards.filter {
+        person => person.hairColour == hairColour
+      }
+      s"You're right! They are $hairColour"
+    } else {
+      personCards.filter {
+        person => person.hairColour != hairColour
+      }
+      s"Nope, they're not $hairColour"
+    }
+  }
+
+  def eyeColourCorrect(eyeColour: String, computerGuess: Person): String = {
+    if (computerGuess.eyeColour == eyeColour) {
+      personCards.filter {
+        person => person.eyeColour == eyeColour
+      }
+      s"You're right! They do have $eyeColour eyes!"
+    } else {
+      personCards.filter {
+        person => person.eyeColour != eyeColour
+      }
+      s"Nope, they don't have $eyeColour eyes!"
+    }
+  }
 
 }
