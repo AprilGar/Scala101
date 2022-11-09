@@ -14,27 +14,27 @@ class GuessWhoGame {
   val randomPerson = personCards(random.nextInt(personCards.length))
 
   def wearsAHat(ComputerGuess: Person): String = {
-    if (ComputerGuess.wearsHat == true){
+    if (ComputerGuess.wearsHat){
       personCards.filter {
-        person => person.wearsHat == true
+        _.wearsHat
       }
       "Yes, they do wear a hat!"
     } else {
       personCards.filter {
-        person => person.wearsHat != true
+        person => !person.wearsHat
       }
       "Nope, they don't wear a hat!"
     }
   }
 
   def wearsGlasses(computerGuess: Person): String = {
-    if (computerGuess.wearsGlasses == true){
+    if (computerGuess.wearsGlasses){
       personCards.filter {
-        person => person.wearsGlasses == true}
+        person => person.wearsGlasses}
           "Yes, they do wear glasses!"
       } else {
       personCards.filter {
-        person => person.wearsGlasses == true
+        person => !person.wearsGlasses
       }
       "No, they don't wear glasses!"
       }
